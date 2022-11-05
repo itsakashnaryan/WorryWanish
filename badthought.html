@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorryWanish</title>
+    <script src="C:\Users\whiff\OneDrive\Desktop\buttons\assignment02\jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#process").hide();
+            $(".done").hide();
+            $("button").click(function () {
+                $("#vanish").fadeOut(6000);
+                $("#process").show();
+                $("#process").fadeOut(6000);
+                $(".done").fadeIn(6100);
+                $(this).hide();
+            });
+                $("#again").click(function(){
+                    location.reload();
+                });
+        });
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #4cb6b6;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            
+        }
+
+        textarea {
+            width: 80%;
+            height: 300px;
+            border-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.6;
+        }
+
+
+
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-decoration: underline;
+            margin-top: 0;
+            opacity: 0.8;
+        }
+
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+            opacity: 0.8;
+        }
+
+        button {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #4cb6b6;
+            background-color: white;
+            opacity: 0.8;
+            font-weight: bold;
+            border-style: none;
+            font-size: large;
+            border-radius: 9px;
+        }
+
+        button:hover {
+            color: rgb(183, 183, 245);
+            background-color: white;
+
+        }
+
+        video{
+            position: fixed;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0.3;
+        }
+
+        #let{
+            margin-bottom: 22px;
+        }
+
+        #one{
+            padding-top: 22px;
+            position: relative;
+        }
+
+        
+
+        a{
+            text-decoration: none;
+            color: white;
+            
+        }
+
+        nav{
+            text-align: right;
+            padding-right: 32px;
+            margin-bottom: 22px;
+            margin-top: 0;
+        }
+
+        #spotify{
+            color: white;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <video autoplay muted loop>
+        <source src="video3.mp4" type="video/mp4">
+    </video>
+    <div id="one">
+       
+        <nav>
+            <a href="badthoughtabout.html" target="_blank"><h5>ABOUT</h5></a>
+            <a href="https://open.spotify.com/playlist/5hBjQUzgNkHhAqklY1GVQK?si=q4k2hkmQRYyv5_sNBw5GcA&utm_source=copy-link" target="_blank"><img src="spo2.png" id="spotify"  alt="spotify"></a>
+        </nav>
+
+        <h2>Pen down</h2>
+        <h1>your worries</h1>
+        <h2 id="let">And let me take them away from you.</h2>
+        <div id="vanish">
+            <textarea name="" id="area" cols="30" rows="10" placeholder="Your worry goes here..."></textarea>
+        </div>
+
+        <h2 id="process">Taking it away...</h2>
+
+        <br>
+        <br>
+        <button>Take away</button>
+        <br>
+        <br>
+        <h2 class="done">Done! Hope you're feeling lighter now!</h2>
+        <br>
+        <br>
+        <button id="again" class="done">Write another WorryWanish</button>
+    </div>
+</body>
+
+</html>
